@@ -1,0 +1,7 @@
+#if
+    #input == "s"
+   # display_card_total
+  #elsif
+   # input == "h"
+    #deal_card
+    #display_card_total
