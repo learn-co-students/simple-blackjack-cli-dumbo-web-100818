@@ -37,7 +37,6 @@ end
 def hit?(initial_round)
   prompt_user
   choice = get_user_input
-  #binding.pry
   new_total = 0
   if choice == "h"
     new_card = deal_card
@@ -60,15 +59,16 @@ end
 #####################################################
 
 def runner
-   welcome
+  welcome
   value = initial_round
-  display_card_total(value)
+  #display_card_total(value)
   if value >= 21
     end_game(value)
   elsif value < 21
     counter = value
     until counter >= 21
-      counter += hit?(counter)
+      counter = hit?(counter)
+      display_card_total(counter)
     end
     end_game(counter)
   end
